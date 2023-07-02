@@ -1,0 +1,10 @@
+* {
+  font-family: "Prompt", sans-serif;
+}
+.main-box {
+  background-color: #cce6ff;
+}
+.card:hover {
+  background-color: #cce6ff;
+  cursor: pointer;
+}
