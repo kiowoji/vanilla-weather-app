@@ -5,8 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="src/styles.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;600&display=swap"
       rel="stylesheet"
@@ -17,36 +15,69 @@
       integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
       crossorigin="anonymous"
     />
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
     <title>Weather App</title>
   </head>
   <body>
     <div class="main-box container rounded-4 mt-4 p-4">
-      <div class="row mt-4 mb-4">
+      <form id="search-form" class="row mt-4 mb-4">
         <div class="col-md-6">
           <div class="input-group">
-            <input type="text" class="form-control" placeholder="Input field" />
+            <input
+              id="city-input"
+              type="search"
+              class="form-control"
+              placeholder="Input field"
+            />
           </div>
         </div>
         <div class="col-md-6">
           <div>
-            <button type="button" class="btn btn-primary">Search</button>
-            <button type="button" class="btn btn-outline-primary ms-2">
+            <button id="search-btn" type="submit" class="btn btn-primary">
+              Search
+            </button>
+            <button
+              id="location-btn"
+              type="submit"
+              class="btn btn-outline-primary ms-2"
+            >
               My location
             </button>
           </div>
         </div>
-      </div>
+      </form>
 
       <h1 id="city">Odesa</h1>
-      <p class="text-muted">Friday 18:30</p>
-      <p class="text-muted">Few clouds</p>
-      <p class="text-muted">Humidity:<span class="text-primary"> 74%</span></p>
-      <p class="text-muted">Wind:<span class="text-primary"> 4.12km/h</span></p>
+      <p id="date" class="text-muted"></p>
+
       <div class="d-flex align-items-center mb-4">
-        <img class="me-4" src="src/img/sun.png" alt="" width="90px" />
-        <p class="display-2"><strong>12°C</strong></p>
+        <img
+          id="icon"
+          class="me-4"
+          src="src/img/clear-sky.png"
+          alt=""
+          width="120px"
+        />
+        <div>
+          <strong id="temperature" class="display-2">26</strong>
+          <span class="units">
+            <a href="#" id="celsius-link" class="text-primary">°C</a>
+            |
+            <a href="#" id="fahrenheit-link">°F</a>
+          </span>
+        </div>
+        <div class="info">
+          <p id="description" class="text-muted">Few clouds</p>
+          <p class="text-muted">
+            Humidity: <span id="humidity" class="text-primary">74</span>%
+          </p>
+          <p class="text-muted">
+            Wind: <span id="wind" class="text-primary">4.12</span> km/h
+          </p>
+        </div>
       </div>
-      <div class="row gap-4 p-3">
+
+      <!--<div class="row gap-4 p-3">
         <div
           class="card text-center col border border-white border-3 rounded-4"
           style="width: 10rem"
@@ -117,8 +148,8 @@
             <h5 class="card-text mt-2 fw-bold">17°C</h5>
           </div>
         </div>
-      </div>
+      </div>-->
     </div>
-    <script src="app.js"></script>
+    <script src="src/app.js"></script>
   </body>
 </html>
