@@ -43,15 +43,19 @@ fahrenheitLink.addEventListener("click", showFahrenheit);
 function setIcon(response) {
     let icon = document.querySelector("#icon");
     let iconMap = {
-        "clear sky": "src/img/clear-sky.png",
-        "few clouds": "src/img/few-clouds.png",
-        "scattered clouds": "src/img/scattered-clouds.png",
-        "broken clouds": "src/img/scattered-clouds.png",
-        "shower rain": "src/img/shower-rain.png",
-        "rain": "src/img/rain.png",
-        "thunderstorm": "src/img/thunderstorm.png",
-        "snow": "src/img/snow.png",
-        "mist": "src/img/mist.png"};
+      "clear sky": "src/img/clear-sky.png",
+      "few clouds": "src/img/few-clouds.png",
+      "scattered clouds": "src/img/scattered-clouds.png",
+      "broken clouds": "src/img/scattered-clouds.png",
+      "overcast clouds": "src/img/scattered-clouds.png",
+      "shower rain": "src/img/shower-rain.png",
+      "rain": "src/img/rain.png",
+      "light rain": "src/img/rain.png",
+      "drizzle": "src/img/rain.png",
+      "thunderstorm": "src/img/thunderstorm.png",
+      "snow": "src/img/snow.png",
+      "mist": "src/img/mist.png",
+    };
     let description = response.data.weather[0].description;
     let iconSrc = iconMap[description];
     icon.setAttribute("src", iconSrc);
