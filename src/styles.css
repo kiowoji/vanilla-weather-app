@@ -24,3 +24,13 @@
 .info {
   margin-left: 60px;
 }
+
+.source  a {
+  text-decoration: none;
+}
+
+.source {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 14px;
+}
