@@ -3,15 +3,16 @@
 }
 
 .main-box {
-  background-color: #dfefff;
+background: linear-gradient(0deg, rgba(99,180,255,1) 7%, rgba(236,246,255,1) 100%);
   box-shadow: 0px 9px 16px 0px rgb(224, 224, 224);
 }
 
-.card{
-  width: 120px;
+#forecast-icon {
+  width: 80px;
 }
+
 .card:hover {
-  background-color: #cce6ff;
+  background-color: transparent;
   cursor: pointer;
 }
 
@@ -33,7 +34,7 @@
 }
 
 .source {
-  margin-top: 30px;
+  margin-top: 10px;
   text-align: center;
   font-size: 14px;
 }
